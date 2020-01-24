@@ -1,0 +1,101 @@
+.controls
+    display: flex
+    justify-content: space-between
+
+    .prev, .next
+        cursor: pointer
+        background-color: #a4a4a4
+        width: 49%
+        height: 50px
+
+    .next
+        text-align: right
+    
+.slider
+    width: 100%
+    height: 875px
+    margin: 0 auto
+    position: relative
+    overflow: hidden
+
+    .estr-slides
+        position: absolute
+        top: 0
+        left: 0
+        min-width: 100%
+        height: 100%
+        display: flex
+
+        .slides
+            width: 1078px
+            height: auto
+            margin-right: 10px
+            float: left
+
+            .top
+                color: #212121
+                text-align: center
+                margin-top: 0.5em
+                font-size: 225%
+
+                .pokemon-id
+                    color: #616161
+                    margin-left: 0.125em
+
+            .body
+                display: flex
+                justify-content: space-between
+                margin-top: 50px
+
+                .image
+                    width: 49%
+                    height: 500px
+                    background-color: #F2F2F2
+                    border-radius: 5px
+
+                .description
+                    width: 49%
+
+                    .details
+                        width: 100%
+                        height: 243px
+                        background-color: #30a7d7
+                        border-radius: 10px
+                        margin-top: 80px
+
+                        div
+                            float: left
+                            width: 50%
+
+                        .title
+                            color: #fff
+                            font-size: 100%
+                            margin: 1.25em 0 0 1.25em
+
+                        .subtitle
+                            color: #212121
+                            font-size: 125%
+                            margin: 0.75em 0 0 1em
+
+            .bottom
+                width: 49%
+                background-color: #a4a4a4
+                border-radius: 10px
+                float: left
+                margin: 1em 0
+                padding: 10px
+
+                .status
+                    display: flex
+                    justify-content: space-around
+
+                    .white
+                        width: 50px
+                        height: 100px
+                        background-color: #fff
+
+                    .blue
+                        width: 50px
+                        max-height: 100px
+                        background-color: #30a7d7
+                        transition: 0.3 ease-in-out

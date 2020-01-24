@@ -1,0 +1,72 @@
+<div class="controls">
+    <div class="prev" (click)="move(1)">
+        <mat-icon aria-hidden="false">navigate_before</mat-icon>
+    </div>
+    <div class="next" (click)="move(-1)">
+        <mat-icon aria-hidden="false">navigate_next</mat-icon>
+    </div>
+</div>
+<div class="slider">
+    <div class="estr-slides" id="estr-slides">
+        <div class="slides" *ngFor="let pokemon of listarPokemon$ | async">
+            <div class="top">
+                <span class="name">
+                    {{ pokemon.nome }}
+                </span>
+                <span class="pokemon-id">
+                    Nº {{ pokemon.id }}
+                </span>
+            </div>
+
+            <div class="body">
+                <div class="image">
+                    <mat-icon aria-hidden="false">announcement</mat-icon>
+                </div>
+                <div class="description">
+                    <div>
+                        {{ pokemon.descricao }}
+                    </div>
+                    <div class="details">
+                        <div>
+                            <p class="title">Altura</p>
+                            <p class="subtitle">{{ pokemon.altura }} m</p>
+                        </div>
+                        <div>
+                            <p class="title">Categoria</p>
+                            <p class="subtitle">{{ pokemon.categoria }}</p>
+                        </div>
+                        <div>
+                            <p class="title">Peso</p>
+                            <p class="subtitle">{{ pokemon.altura }} kg</p>
+                        </div>
+                        <div>
+                            <p class="title">Habilidade</p>
+                            <p class="subtitle">{{ pokemon.habilidade }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom">
+                <h3>Status</h3>
+                <div class="status">
+                    <div class="atack">
+                        <div class="white"></div>
+                        <div class="blue" [style.height]='pokemon.ataque + "0px"'></div>
+                        <p>Ataque</p>
+                    </div>
+                    <div class="defense">
+                        <div class="white"></div>
+                        <div class="blue" [style.height]='pokemon.defesa + "0px"'></div>
+                        <p>Defesa</p>
+                    </div>
+                    <div class="speed">
+                        <div class="white"></div>
+                        <div class="blue" [style.height]='pokemon.velocidade + "0px"'></div>
+                        <p>Velocidade</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
